@@ -107,14 +107,31 @@
                     <div class="flex">
                         <label>
                             <span>المحافظة</span>
-                            <input class="input" type="text" placeholder="" required="">
+                            <select id="province" name="province" required
+                                <option value="">اختر المحافظة</option>
+                                <option value="دمشق">دمشق</option>
+                                <option value="ريف دمشق">ريف دمشق</option>
+                                <option value="حلب">حلب</option>
+                                <option value="حمص">حمص</option>
+                                <option value="حماة">حماة</option>
+                                <option value="اللاذقية">اللاذقية</option>
+                                <option value="طرطوس">طرطوس</option>
+                                <option value="دير الزور">دير الزور</option>
+                                <option value="الرقة">الرقة</option>
+                                <option value="الحسكة">الحسكة</option>
+                                <option value="إدلب">إدلب</option>
+                                <option value="درعا">درعا</option>
+                                <option value="القنيطرة">القنيطرة</option>
+                                <option value="السويداء">السويداء</option>
+                            </select>
                         </label>
 
                         <label>
                             <span>العمر</span>
-                            <input class="input" type="text" placeholder="" required="">
+                            <input class="input" type="number" placeholder="" required="">
                         </label>
                     </div>
+
                     <label>
                         <span>البريد الالكتروني</span>
                         <input class="input" type="email" placeholder="" required="">
@@ -171,7 +188,8 @@
         <div class="logos-container">
             <!-- First Logo Group -->
             <div class="logo-group">
-                <div class="footer-logo"><img src="images/khidma-logo-footer.png" alt="" width="90px" height="90px"></div>
+                <div class="footer-logo"><img src="images/khidma-logo-footer.png" alt="" width="90px" height="90px">
+                </div>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
