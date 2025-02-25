@@ -1,0 +1,215 @@
+.all-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    padding: 25px 0;
+    text-align: center;
+}
+
+
+
+/* Start about us */
+.about-us h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--title-color);
+    margin-bottom: 20px;
+
+}
+
+.about-us p {
+    font-family: 'Expo Arabic', sans-serif;
+    font-size: 1.2em;
+    color: var(--paragraph-color);
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .about-us p {
+        font-size: 1.1em;
+    }
+}
+
+/* End about us */
+
+
+/* Start about khidma */
+.about-khidma {
+    margin-top: 40px;
+}
+
+.about-khidma h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--title-color);
+    margin-bottom: 20px;
+}
+
+.about-khidma p {
+    font-family: 'Expo Arabic', sans-serif;
+    font-size: 1.2em;
+    color: var(--paragraph-color);
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .about-khidma p {
+        font-size: 1.1em;
+    }
+}
+
+/* End about khidma */
+
+
+/* Start terms of use */
+.terms {
+    margin-top: 40px;
+}
+
+.terms h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--title-color);
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .terms h1 {
+        font-size: 1.5em;
+    }
+
+}
+
+.terms p {
+    font-family: 'Expo Arabic', sans-serif;
+    font-size: 18px;
+    color: var(--paragraph-color);
+    line-height: 2;
+}
+
+@media screen and (max-width: 768px) {
+    .terms p {
+        font-size: 1.1em;
+    }
+
+}
+
+.terms-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+
+
+.term {
+    background-image: url("/images/dots.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid var(--border-color);
+    width: 70%;
+    min-height: 60px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .term {
+        width: 100%;
+    }
+}
+
+.term-border {
+    border-color: var(--title-color);
+}
+
+.term-head {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    transition: all 0.3s ease;
+    padding: 15px;
+}
+
+.term-head-toggle {
+    background-color: #E9ECEF;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+.term h3 {
+    font-size: 18px;
+    color: var(--title-color);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .term h3 {
+        font-size: 13px;
+    }
+
+}
+
+.plus {
+    background-color: #E9ECEF;
+    padding: 6px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.minus {
+    background-color: #E9ECEF;
+    padding: 6px;
+    border-radius: 3px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.minus-toggle {
+    background-color: var(--paragraph-color);
+    color: var(--secondary);
+}
+
+.term-dec {
+    display: none;
+    padding: 10px;
+    font-size: 1em;
+    color: var(--text-color);
+    margin-top: 10px;
+    padding: 20px;
+    text-align: start;
+    font-family: 'Expo Arabic', sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* End terms of use */
+
+
+
+.about-end {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--title-color);
+    margin: 50px 0 30px 0;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+    .about-end {
+        font-size: 20px;
+    }
+
+}

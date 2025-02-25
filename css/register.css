@@ -1,0 +1,134 @@
+.midl-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 20px 0;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 10 10 10 rgba(0, 0, 0, 0.7);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    /* background-color: var(--secondary); */
+    background-image: url("/images/dots.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--title-color);
+    border: 2px solid var(--border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: var(--title-color);
+    margin-bottom: 10px;
+}
+
+.message,
+.signin {
+    font-size: 0.9rem;
+    color: var(--paragraph-color);
+}
+
+.signin {
+    text-align: center;
+}
+
+.signin a {
+    color: var(--title-color);
+}
+
+.signin a:hover {
+    text-decoration: underline;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form label {
+    position: relative;
+    flex: 1 1 calc(50% - 10px);
+}
+
+.form label .input {
+    background-color: var(--secondary);
+    color: var(--title-color);
+    border: 2px solid var(--border-color);
+    width: 100%;
+    padding: 16px 10px 5px;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.form label .input:placeholder-shown+span {
+    top: 14px;
+    font-size: 1rem;
+}
+
+.form label .input:focus+span,
+.form label .input:valid+span {
+    color: var(--button-bg);
+    top: -5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+
+.submit {
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--button-text);
+    background: linear-gradient(-45deg, #2d1a0c 50%, rgba(56, 25, 14, .91) 90%, #2e140a);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.submit:hover {
+    background-color: var(--button-hover);
+}
+
+@media (max-width: 768px) {
+    .midl-form {
+        height: 80vh;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .form {
+        gap: 10px;
+    }
+
+    .submit {
+        padding: 14px;
+        font-size: 0.8rem;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/verification-code.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <title>كود التحقق</title>
+</head>
+
+<body>
+
+    <!-- Start verification code  -->
+    <div class="verification-code">
+        <div class="verification-container">
+            <h2 class="title">كود التحقق</h2>
+            <p class="description">الرجاء إدخال رمز التحقق المرسل إلى بريدك الإلكتروني</p>
+            <div class="code-inputs">
+                <input type="text" maxlength="1" class="code-input" autofocus inputmode="numeric" pattern="[0-9]*">
+                <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]*">
+                <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]*">
+                <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]*">
+                <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]*">
+                <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]*">
+            </div>
+            <button class="verify-button">التحقق من الكود</button>
+        </div>
+    </div>
+    <!-- End verification code  -->
+
+    <script src="main.js"></script>
+</body>
+
+</html>

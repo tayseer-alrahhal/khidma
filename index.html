@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="نقدم حلولًا شاملة لتلبية احتياجاتك اليومية، بكل سهولة وكفاءة.">
+    <!-- Render All Elements Normaly -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- main Template Css File -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="images/logo-v2.png" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <title>خدمة</title>
+</head>
+
+<body>
+
+    <!-- Start background animation  -->
+    <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <!-- End background animation  -->
+
+    <!-- Start Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Logo.png" alt="Logo" width="60px" height="60px">
+                </a>
+                <img src="images/flag.png" alt="Flag" width="60px" height="60px">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="#">اعلانات عاجلة</a></li>
+                    <li><a href="contact-page.html">تواصل معنا</a></li>
+                    <button class="user-btn">
+                        <img src="images/user.png" alt="" onclick="openUserOptions()">
+                    </button>
+                </ul>
+            </nav>
+
+            <div class="user-options">
+                <ul>
+                    <li><a href="#">اعلاناتي</a></li>
+                    <li><a href="about.html">عن خدمة</a></li>
+                    <li><a href="account-details.html">معلومات الحساب</a></li>
+                    <li><a href="register.html">انشاء حساب</a></li>
+                    <li><a href="login.html">تسجيل الدخول</a></li>
+                </ul>
+            </div>
+
+            <svg class="menu-btn" onclick="openMenu()" stroke="currentColor" fill="currentColor" stroke-width="0"
+                viewBox="0 0 20 20" aria-hidden="true" height="35" width="35" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"></path>
+            </svg>
+
+            <div class="overlay" onclick="closeMenu()"></div>
+            <div class="model">
+                <svg class="close-menu" onclick="closeMenu()" stroke="currentColor" fill="currentColor" stroke-width="0"
+                    viewBox="0 0 24 24" height="35" width="35" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="none" stroke-width="2" d="M7,7 L17,17 M7,17 L17,7"></path>
+                </svg>
+                <ul>
+                    <li><a href="index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="#">اعلانات عاجلة</a></li>
+                    <li><a href="contact-page.html">تواصل معنا</a></li>
+                    <li><a href="#">اعلاناتي</a></li>
+                    <li><a href="about.html">عن خدمة</a></li>
+                    <li><a href="account-details.html">معلومات الحساب</a></li>
+                    <li><a href="register.html">انشاء حساب</a></li>
+                    <li><a href="login.html">تسجيل الدخول</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+
+        </div>
+    </header>
+    <!-- End Header  -->
+
+    <!-- Start Hero section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-info">
+                <h1 class="hero-title">الخدمات التي تهمك في مكان واحد</h1>
+                <h3 class="hero-title2">نقدم حلولًا شاملة لتلبية احتياجاتك اليومية، بكل سهولة وكفاءة.</h3>
+                <p class="hero-dec">سواء كنت تبحث عن رعاية صحية فورية، خيارات سكن مناسبة، فرص عمل، أو حتى استشارات
+                    قانونية، نقدم لك خدمات
+                    متكاملة تدعم أسلوب حياتك وتسهل وصولك إلى كل ما تحتاجه.</p>
+                <a href="about.html">عن خدمة</a>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero section -->
+
+    <!-- Start services section -->
+    <section class="services">
+        <h1 class="section-title-serv">خدماتنا</h1>
+        <div class="container">
+            <div class="services-container">
+
+                <div class="service" data-aos="zoom-in">
+                    <div class="info">
+                        <img src="images/services/service-1.jpg" alt="" width="100px" height="100px">
+                        <h2 class="service-title">الخدمات الصحية</h2>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-des">معرفة الصيدليات المناوبة وأقرب مستشفى لضمان الرعاية الفورية.</p>
+                        <a class="more-btn" href="pharmacies.html">المزيد</a>
+                    </div>
+                </div>
+
+                <div class="service" data-aos="zoom-in" data-aos-delay="105">
+                    <div class="info">
+                        <img src="images/services/service-2.jpg" alt="" width="100px" height="100px">
+                        <h2 class="service-title">الخدمات الاسكانية</h2>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-des">توفير معلومات حول خيارات السكن والمجمعات السكنية.</p>
+                        <a class="more-btn" href="">المزيد</a>
+                    </div>
+                </div>
+
+                <div class="service" data-aos="zoom-in" data-aos-delay="110">
+                    <div class="info">
+                        <img src="images/services/service-3.jpg" alt="" width="100px" height="100px">
+                        <h2 class="service-title">فرص عمل</h2>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-des">البحث عن فرص العمل المتاحة في مجالات مختلفة.</p>
+                        <a class="more-btn" href="">المزيد</a>
+                    </div>
+                </div>
+                <div class="service" data-aos="zoom-in" data-aos-delay="115">
+                    <div class="info">
+                        <img src="images/services/service-4.jpg" alt="" width="100px" height="100px">
+                        <h2 class="service-title">الخدمات اليومية</h2>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-des">الوصول إلى خدمات الحياة اليومية مثل المواصلات والأسواق.</p>
+                        <a class="more-btn" href="">المزيد</a>
+                    </div>
+                </div>
+                <div class="service" data-aos="zoom-in" data-aos-delay="120">
+                    <div class="info">
+                        <img src="images/services/service-5.jpg" alt="" width="100px" height="100px">
+                        <h2 class="service-title">الخدمات التعليمية</h2>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-des">معلومات حول المؤسسات التعليمية والدورات التدريبية.</p>
+                        <a class="more-btn" href="">المزيد</a>
+                    </div>
+                </div>
+                <div class="service" data-aos="zoom-in" data-aos-delay="125">
+                    <div class="info">
+                        <img src="images/services/service-6.jpg" alt="" width="100px" height="100px">
+                        <h2 class="service-title">الخدمات الاجتماعية</h2>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-des">دعم وتوجيه في مجالات الرعاية الاجتماعية والمجتمعية.</p>
+                        <a class="more-btn" href="">المزيد</a>
+                    </div>
+                </div>
+                <div class="service" data-aos="zoom-in" data-aos-delay="130">
+                    <div class="info">
+                        <img src="images/services/service-7.jpg" alt="" width="100px" height="100px">
+                        <h2 class="service-title">الخدمات القانونية</h2>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-des">استشارات قانونية وخدمات متعلقة بالمعاملات القانونية.</p>
+                        <a class="more-btn" href="">المزيد</a>
+                    </div>
+                </div>
+                <div class="service" data-aos="zoom-in" data-aos-delay="135">
+                    <div class="info">
+                        <img src="images/services/service-8.jpg" alt="" width="100px" height="100px">
+                        <h2 class="service-title">الخدمات الترفيهية</h2>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-des">معلومات عن الفعاليات الترفيهية والأنشطة الاجتماعية.</p>
+                        <a class="more-btn" href="">المزيد</a>
+                    </div>
+                </div>
+                <div class="service" data-aos="zoom-in" data-aos-delay="140">
+                    <div class="info">
+                        <img src="images/services/service-9.jpg" alt="" width="100px" height="100px">
+                        <h2 class="service-title">الخدمات التقنية</h2>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-des">دعم فني وحلول تقنية للمشاكل التقنية المتنوعة.</p>
+                        <a class="more-btn" href="">المزيد</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End services section -->
+
+
+    <!-- Start Popular Services section -->
+    <section class="popular-services">
+        <h1 class="section-title">خدمات شائعة</h1>
+        <div class="container">
+
+            <div class="box">
+                <ul>
+                    <li>
+                        <a href="pharmacies.html">الصيدليات المناوبة</a>
+                    </li>
+                    <li>
+                        <a href="">النشرة المالية</a>
+                    </li>
+                    <li>
+                        <a href="">خدمات التوصيل</a>
+                    </li>
+                    <li>
+                        <a href="">مخافر الشرطة</a>
+                    </li>
+                    <li>
+                        <a href="">اقرب مستشفى</a>
+                    </li>
+                    <li>
+                        <a href="">بيوت للايجار</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Popular Services section -->
+
+    <!-- Start Ads section -->
+    <section class="ads">
+        <h1 class="section-title">اعلانات عاجلة</h1>
+        <div class="container">
+
+            <div class="ad-container">
+                <div class="ad-content">
+                    <h2 class="ad-title">فرصة عمل</h2>
+                    <div class="ad">
+                        <div class="ad-info">
+                            <p class="jop-title">المسمى الوظيفي: رئيس جمهورية</p>
+                            <p class="Location">المدينة-المنطقة: دمشق-حي المزة</p>
+                            <p class="type">الدوام: دوام كامل</p>
+                            <p class="amount">الراتب: مئة ليرة سورية قابلة لتفاوض</p>
+                            <p class="date">تاريخ التحديث: 08/02/2024</p>
+                            <a class="more-btn" href="">المزيد</a>
+                        </div>
+                        <img src="images/ad.png" alt="ad" width="400px" height="400px">
+                    </div>
+                </div>
+
+                <div class="dots">
+                    <span class="dot"></span>
+                    <span class="dot dot-active"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Ads section -->
+
+    <!-- Start Syria map section  -->
+    <section class="syria-map">
+        <h1 class="section-title">اماكن توفر خدماتنا</h1>
+        <div class="container">
+            <div class="map">
+                <img src="images/syria-map.png" alt="" width="500px" height="500px">
+            </div>
+        </div>
+    </section>
+    <!-- End Syria map section  -->
+
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>معلومات عامة</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">من نحن ؟</a></li>
+                    <li><a href="about.html">عن الموقع</a></li>
+                    <li><a href="about.html">كيف يعمل الموقع ؟</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>المساعدة</h3>
+                <ul class="footer-links">
+                    <li><a href="contact-page.html">مركز المساعدة</a></li>
+                    <li><a href="about.html">الأسئلة الشائعة</a></li>
+                    <li><a href="contact-page.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>القانونية</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">شروط الاستخدام</a></li>
+                    <li><a href="about.html">سياسة الخصوصية</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="logos-container">
+            <!-- First Logo Group -->
+            <div class="logo-group">
+                <div class="footer-logo"><img src="images/khidma-logo-footer.png" alt="" width="90px" height="90px">
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- Second Logo Group -->
+            <div class="logo-group">
+                <div class="logo"><img src="images/z-footer.png" alt="" width="90px" height="90px"></div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © 2025 جميع الحقوق محفوظة لشركة زيتونة
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+
+    <!-- تضمين مكتبة AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>

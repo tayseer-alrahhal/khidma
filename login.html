@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <title>تسجيل الدخول</title>
+</head>
+
+<body>
+    <!-- Start Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Logo.png" alt="Logo" width="60px" height="60px">
+                </a>
+                <img src="images/flag.png" alt="Flag" width="60px" height="60px">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="#">اعلانات عاجلة</a></li>
+                    <li><a href="contact-page.html">تواصل معنا</a></li>
+                    <button class="user-btn">
+                        <img src="images/user.png" alt="" onclick="openUserOptions()">
+                    </button>
+                </ul>
+            </nav>
+
+            <div class="user-options">
+                <ul>
+                    <li><a href="#">اعلاناتي</a></li>
+                    <li><a href="#">عن خدمة</a></li>
+                    <li><a href="account-details.html">معلومات الحساب</a></li>
+                    <li><a href="register.html">انشاء حساب</a></li>
+                    <li><a href="login.html">تسجيل الدخول</a></li>
+                </ul>
+            </div>
+
+            <svg class="menu-btn" onclick="openMenu()" stroke="currentColor" fill="currentColor" stroke-width="0"
+                viewBox="0 0 20 20" aria-hidden="true" height="35" width="35" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"></path>
+            </svg>
+
+            <div class="overlay" onclick="closeMenu()"></div>
+            <div class="model">
+                <svg class="close-menu" onclick="closeMenu()" stroke="currentColor" fill="currentColor" stroke-width="0"
+                    viewBox="0 0 24 24" height="35" width="35" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="none" stroke-width="2" d="M7,7 L17,17 M7,17 L17,7"></path>
+                </svg>
+                <ul>
+                    <li><a href="index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="#">اعلانات عاجلة</a></li>
+                    <li><a href="contact-page.html">تواصل معنا</a></li>
+                    <li><a href="#">اعلاناتي</a></li>
+                    <li><a href="#">عن خدمة</a></li>
+                    <li><a href="account-details.html">معلومات الحساب</a></li>
+                    <li><a href="register.html">انشاء حساب</a></li>
+                    <li><a href="login.html">تسجيل الدخول</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+
+        </div>
+    </header>
+    <!-- End Header  -->
+
+    <!-- Start hero  -->
+    <div class="login-hero">
+        <img class="login-hero-v1" src="images/imaar.png" alt="">
+        <img class="login-hero-v2" src="images/login-hero-v2.png" alt="">
+    </div>
+    <!-- End hero  -->
+
+    <!-- Start Login form -->
+    <div class="container">
+        <div class="midl-form">
+            <div class="register">
+                <form class="form">
+                    <p class="title">تسجيل الدخول</p>
+                    <label>
+                        <span>البريد الألكتروني</span>
+                        <input class="input" type="email" placeholder="" required="">
+                    </label>
+
+                    <label>
+                        <span>كلمة المرور</span>
+                        <input class="input" type="password" placeholder="" required="">
+                    </label>
+                    <button class="submit">دخول</button>
+                    <div class="login-options">
+                        <a href="password-page.html" class="signin">هل نسيت كلمة المرور ؟ </a>
+                        <a href="register.html" class="register-btn">إنشاء حساب</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End Login form -->
+
+    <!-- Start Rols -->
+    <div class="rols">
+        <p>نلتزم بحماية بياناتك الشخصية وضمان سرية جميع المعلومات المقدمة.</p>
+        <p>يرجى التأكد من تسجيل الدخول من جهاز أمن وتجنب مشاركة معلومات الدخول الخاصة بك مع أي شخص.</p>
+        <p>
+            قد تستخدم ملفات تعريف الارتباط لتحسين تجربتك على الموقع. لمعرفة المزيد، يمكنك قراءة
+            <a href="#">سياسة الخصوصية</a>
+        </p>
+        <p>يتم مراقبة الأنشطة على حسابك للحفاظ على الأمان ومنع أي استخدام غير مصرح به.</p>
+    </div>
+    <!-- End Rols -->
+
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>معلومات عامة</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">من نحن ؟</a></li>
+                    <li><a href="about.html">عن الموقع</a></li>
+                    <li><a href="about.html">كيف يعمل الموقع ؟</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>المساعدة</h3>
+                <ul class="footer-links">
+                    <li><a href="contact-page.html">مركز المساعدة</a></li>
+                    <li><a href="about.html">الأسئلة الشائعة</a></li>
+                    <li><a href="contact-page.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>القانونية</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">شروط الاستخدام</a></li>
+                    <li><a href="about.html">سياسة الخصوصية</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="logos-container">
+            <!-- First Logo Group -->
+            <div class="logo-group">
+                <div class="footer-logo"><img src="images/khidma-logo-footer.png" alt="" width="90px" height="90px"></div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- Second Logo Group -->
+            <div class="logo-group">
+                <div class="logo"><img src="images/z-footer.png" alt="" width="90px" height="90px"></div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © 2025 جميع الحقوق محفوظة لشركة زيتونة
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <script src="main.js"></script>
+</body>
+
+</html>

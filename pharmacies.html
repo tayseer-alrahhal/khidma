@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Render All Elements Normaly -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- main Template Css Files -->
+    <link rel="stylesheet" href="css/pharmacies.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <title>الصيدليات المناوبة</title>
+
+</head>
+
+<body>
+
+    <!-- Start Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Logo.png" alt="Logo" width="60px" height="60px">
+                </a>
+                <img src="images/flag.png" alt="Flag" width="60px" height="60px">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="#">اعلانات عاجلة</a></li>
+                    <li><a href="contact-page.html">تواصل معنا</a></li>
+                    <button class="user-btn">
+                        <img src="images/user.png" alt="" onclick="openUserOptions()">
+                    </button>
+                </ul>
+            </nav>
+
+            <div class="user-options">
+                <ul>
+                    <li><a href="#">اعلاناتي</a></li>
+                    <li><a href="about.html">عن خدمة</a></li>
+                    <li><a href="account-details.html">معلومات الحساب</a></li>
+                    <li><a href="register.html">انشاء حساب</a></li>
+                    <li><a href="login.html">تسجيل الدخول</a></li>
+                </ul>
+            </div>
+
+            <svg class="menu-btn" onclick="openMenu()" stroke="currentColor" fill="currentColor" stroke-width="0"
+                viewBox="0 0 20 20" aria-hidden="true" height="35" width="35" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"></path>
+            </svg>
+
+            <div class="overlay" onclick="closeMenu()"></div>
+            <div class="model">
+                <svg class="close-menu" onclick="closeMenu()" stroke="currentColor" fill="currentColor" stroke-width="0"
+                    viewBox="0 0 24 24" height="35" width="35" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="none" stroke-width="2" d="M7,7 L17,17 M7,17 L17,7"></path>
+                </svg>
+                <ul>
+                    <li><a href="index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="#">اعلانات عاجلة</a></li>
+                    <li><a href="contact-page.html">تواصل معنا</a></li>
+                    <li><a href="#">اعلاناتي</a></li>
+                    <li><a href="about.html">عن خدمة</a></li>
+                    <li><a href="account-details.html">معلومات الحساب</a></li>
+                    <li><a href="register.html">انشاء حساب</a></li>
+                    <li><a href="login.html">تسجيل الدخول</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+
+        </div>
+    </header>
+    <!-- End Header  -->
+
+    <!-- Start pharmacies  -->
+    <div class="pharmacies-title">
+        <h1>الصيدليات المناوبة</h1>
+        <p>ابحث عن الصيدليات المفتوحة بالقرب منك</p>
+    </div>
+
+    <div class="pharmacies-container">
+        <section class="search-section">
+            <h2>البحث عن الصيدليات</h2>
+            <form class="search-form">
+                <div class="form-group">
+                    <label for="governorate">المحافظة</label>
+                    <select id="governorate" name="governorate">
+                        <option value="">كل المحافظات</option>
+                        <option value="damascus">دمشق</option>
+                        <option value="rural-damascus">ريف دمشق</option>
+                        <option value="aleppo">حلب</option>
+                        <option value="homs">حمص</option>
+                        <option value="hama">حماة</option>
+                        <option value="latakia">اللاذقية</option>
+                        <option value="tartus">طرطوس</option>
+                        <option value="idlib">إدلب</option>
+                        <option value="daraa">درعا</option>
+                        <option value="sweida">السويداء</option>
+                        <option value="deir-ez-zor">دير الزور</option>
+                        <option value="raqqa">الرقة</option>
+                        <option value="al-hasakah">الحسكة</option>
+                        <option value="quneitra">القنيطرة</option>
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <label for="region">المنطقة</label>
+                    <select id="region" name="region">
+                        <option value="">كل المناطق</option>
+                        <option value="malki">المالكي</option>
+                        <option value="mazzeh">المزة</option>
+                        <option value="barzeh">برزة</option>
+                        <option value="kafarsouseh">كفرسوسة</option>
+                        <option value="ruken-eddin">ركن الدين</option>
+                        <option value="jobar">جوبر</option>
+                        <option value="midan">الميدان</option>
+                        <option value="qassa">القصاع</option>
+                        <option value="bab-touma">باب توما</option>
+                        <option value="mazraa">المزرعة</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="village">الحي/القرية</label>
+                    <input type="text" id="village" name="village" placeholder="أدخل اسم الحي أو القرية">
+                </div>
+                <button type="button" class="search-btn">بحث</button>
+            </form>
+        </section>
+
+        <section class="results-section">
+            <h2>الصيدليات المناوبة</h2>
+            <div class="results-container">
+                <!-- Pharmacy 1 -->
+                <div class="pharmacy-card">
+                    <div class="pharmacy-header">صيدلية الشفاء</div>
+                    <img src="images/services/service-1.jpg" alt="صيدلية الشفاء" class="pharmacy-image">
+                    <div class="pharmacy-details">
+                        <div class="pharmacy-info">
+                            <span class="info-label">الموقع:
+                                <span class="info-value">ادلب</span>
+                            </span>
+                        </div>
+                        <div class="pharmacy-info">
+                            <span class="info-label">ساعات العمل :
+                                <span class="info-value">24 ساعة</span>
+                            </span>
+                        </div>
+                        <div class="pharmacy-info">
+                            <span class="info-label">العنوان :
+                                <span class="info-value">شارع 02</span>
+                            </span>
+                        </div>
+                        <div class="pharmacy-info">
+                            <span class="info-label">الهاتف :
+                                <span class="info-value">009632587812548</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="pharmacy-footer">
+                        <span class="update-date">تم التحديث: ٢٣ فبراير ٢٠٢٥</span>
+                        <button class="more-btn">المزيد</button>
+                    </div>
+                </div>
+                <!-- Pharmacy 2 -->
+                <div class="pharmacy-card">
+                    <div class="pharmacy-header">صيدلية الشفاء</div>
+                    <img src="images/services/service-1.jpg" alt="صيدلية الشفاء" class="pharmacy-image">
+                    <div class="pharmacy-details">
+                        <div class="pharmacy-info">
+                            <span class="info-label">الموقع:
+                                <span class="info-value">ادلب</span>
+                            </span>
+                        </div>
+                        <div class="pharmacy-info">
+                            <span class="info-label">ساعات العمل :
+                                <span class="info-value">24 ساعة</span>
+                            </span>
+                        </div>
+                        <div class="pharmacy-info">
+                            <span class="info-label">العنوان :
+                                <span class="info-value">شارع 02</span>
+                            </span>
+                        </div>
+                        <div class="pharmacy-info">
+                            <span class="info-label">الهاتف :
+                                <span class="info-value">009632587812548</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="pharmacy-footer">
+                        <span class="update-date">تم التحديث: ٢٣ فبراير ٢٠٢٥</span>
+                        <button class="more-btn">المزيد</button>
+                    </div>
+                </div>
+                <!-- Pharmacy 3 -->
+                <div class="pharmacy-card">
+                    <div class="pharmacy-header">صيدلية الشفاء</div>
+                    <img src="images/services/service-1.jpg" alt="صيدلية الشفاء" class="pharmacy-image">
+                    <div class="pharmacy-details">
+                        <div class="pharmacy-info">
+                            <span class="info-label">الموقع:
+                                <span class="info-value">ادلب</span>
+                            </span>
+                        </div>
+                        <div class="pharmacy-info">
+                            <span class="info-label">ساعات العمل :
+                                <span class="info-value">24 ساعة</span>
+                            </span>
+                        </div>
+                        <div class="pharmacy-info">
+                            <span class="info-label">العنوان :
+                                <span class="info-value">شارع 02</span>
+                            </span>
+                        </div>
+                        <div class="pharmacy-info">
+                            <span class="info-label">الهاتف :
+                                <span class="info-value">009632587812548</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="pharmacy-footer">
+                        <span class="update-date">تم التحديث: ٢٣ فبراير ٢٠٢٥</span>
+                        <button class="more-btn">المزيد</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- End pharmacies  -->
+
+
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>معلومات عامة</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">من نحن ؟</a></li>
+                    <li><a href="about.html">عن الموقع</a></li>
+                    <li><a href="about.html">كيف يعمل الموقع ؟</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>المساعدة</h3>
+                <ul class="footer-links">
+                    <li><a href="contact-page.html">مركز المساعدة</a></li>
+                    <li><a href="about.html">الأسئلة الشائعة</a></li>
+                    <li><a href="contact-page.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>القانونية</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">شروط الاستخدام</a></li>
+                    <li><a href="about.html">سياسة الخصوصية</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="logos-container">
+            <!-- First Logo Group -->
+            <div class="logo-group">
+                <div class="footer-logo"><img src="images/khidma-logo-footer.png" alt="" width="90px" height="90px">
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- Second Logo Group -->
+            <div class="logo-group">
+                <div class="logo"><img src="images/z-footer.png" alt="" width="90px" height="90px"></div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © 2025 جميع الحقوق محفوظة لشركة زيتونة
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+</body>
+
+</html>
