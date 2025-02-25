@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Render All Elements Normaly -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- main Template Css File -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/create-add.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <title>إنشاء إعلان</title>
+
+</head>
+
+<body>
+
+    <!-- Start Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Logo.png" alt="Logo" width="60px" height="60px">
+                </a>
+                <img src="images/flag.png" alt="Flag" width="60px" height="60px">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="#">اعلانات عاجلة</a></li>
+                    <li><a href="contact-page.html">تواصل معنا</a></li>
+                    <button class="user-btn">
+                        <img src="images/user.png" alt="" onclick="openUserOptions()">
+                    </button>
+                </ul>
+            </nav>
+
+            <div class="user-options">
+                <ul>
+                    <li><a href="#">اعلاناتي</a></li>
+                    <li><a href="about.html">عن خدمة</a></li>
+                    <li><a href="account-details.html">معلومات الحساب</a></li>
+                    <li><a href="register.html">انشاء حساب</a></li>
+                    <li><a href="login.html">تسجيل الدخول</a></li>
+                </ul>
+            </div>
+
+            <svg class="menu-btn" onclick="openMenu()" stroke="currentColor" fill="currentColor" stroke-width="0"
+                viewBox="0 0 20 20" aria-hidden="true" height="35" width="35" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"></path>
+            </svg>
+
+            <div class="overlay" onclick="closeMenu()"></div>
+            <div class="model">
+                <svg class="close-menu" onclick="closeMenu()" stroke="currentColor" fill="currentColor" stroke-width="0"
+                    viewBox="0 0 24 24" height="35" width="35" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="none" stroke-width="2" d="M7,7 L17,17 M7,17 L17,7"></path>
+                </svg>
+                <ul>
+                    <li><a href="index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="#">اعلانات عاجلة</a></li>
+                    <li><a href="contact-page.html">تواصل معنا</a></li>
+                    <li><a href="#">اعلاناتي</a></li>
+                    <li><a href="about.html">عن خدمة</a></li>
+                    <li><a href="account-details.html">معلومات الحساب</a></li>
+                    <li><a href="register.html">انشاء حساب</a></li>
+                    <li><a href="login.html">تسجيل الدخول</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+
+        </div>
+    </header>
+    <!-- End Header  -->
+
+
+    <!-- Start create add -->
+    <div class="ads-container">
+        <h1>إنشاء إعلان</h1>
+        <!-- اختيار نوع الإعلان -->
+        <div class="ad-type-selection">
+            <label>
+                <input type="radio" name="adType" value="realEstate"> عقارات للإيجار/للبيع
+            </label>
+            <label>
+                <input type="radio" name="adType" value="job"> إعلان وظيفة
+            </label>
+            <label>
+                <input type="radio" name="adType" value="car"> سيارات للبيع/للإيجار
+            </label>
+        </div>
+
+        <!-- نموذج الإعلان العقاري -->
+        <form id="realEstateForm">
+            <h2>إعلان عقاري</h2>
+            <div class="form-group">
+                <label for="propertyType">نوع العقار</label>
+                <select id="propertyType" name="propertyType">
+                    <option value="">اختر</option>
+                    <option value="apartment">شقة</option>
+                    <option value="house">منزل</option>
+                    <option value="villa">فيلا</option>
+                    <option value="studio">ستوديو</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>خيار الإعلان</label>
+                <label>
+                    <input class="sale" type="radio" name="adOption" value="sale"> بيع
+                </label>
+                <label>
+                    <input class="rent" type="radio" name="adOption" value="rent"> إيجار
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="purpose">الغرض</label>
+                <input type="text" id="purpose" name="purpose" placeholder="مثال: سكني، تجاري">
+            </div>
+            <div class="row">
+                <div class="col-33 form-group">
+                    <label for="area">المساحة</label>
+                    <input type="number" id="area" name="area">
+                </div>
+                <div class="col-33 form-group">
+                    <label for="rooms">عدد الغرف</label>
+                    <input type="number" id="rooms" name="rooms">
+                </div>
+                <div class="col-33 form-group">
+                    <label for="price">السعر</label>
+                    <input type="number" id="price" name="price">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="rentDuration">مدة الإيجار</label>
+                <input type="text" id="rentDuration" name="rentDuration" placeholder="مثال: شهري، سنوي">
+            </div>
+
+            <fieldset>
+                <legend>الموقع</legend>
+                <div class="form-group">
+                    <label for="governorate">المحافظة</label>
+                    <input type="text" id="governorate" name="governorate">
+                </div>
+                <div class="form-group">
+                    <label for="city">المدينة</label>
+                    <input type="text" id="city" name="city">
+                </div>
+                <div class="form-group">
+                    <label for="neighborhood">القرية / الحي</label>
+                    <input type="text" id="neighborhood" name="neighborhood">
+                </div>
+                <div class="form-group">
+                    <label for="nameNumber">الاسم / الرقم</label>
+                    <input type="text" id="nameNumber" name="nameNumber">
+                </div>
+                <div class="form-group">
+                    <label for="street">الشارع</label>
+                    <input type="text" id="street" name="street">
+                </div>
+                <div class="form-group">
+                    <label for="detailedAddress">العنوان بالتفصيل</label>
+                    <input type="text" id="detailedAddress" name="detailedAddress">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>الميزات الداخلية</legend>
+                <div class="form-group">
+                    <label for="view">الإطلالة</label>
+                    <select id="view" name="view">
+                        <option value="">اختر</option>
+                        <option value="none">لا شيء</option>
+                        <option value="yes">نعم</option>
+                        <option value="furnished">أثاث المنزل</option>
+                        <option value="additional">مرافق إضافية</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>معلومات الاتصال</legend>
+                <div class="form-group">
+                    <label for="contactName">اسم الشخص</label>
+                    <input type="text" id="contactName" name="contactName">
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">رقم الهاتف</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber">
+                </div>
+                <div class="form-group">
+                    <label for="additionalDetails">تفاصيل إضافية</label>
+                    <textarea id="additionalDetails" name="additionalDetails" rows="3"></textarea>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="btn">إرسال الإعلان العقاري</button>
+        </form>
+
+        <!-- نموذج إعلان وظيفة -->
+        <form id="jobForm">
+            <h2>إعلان وظيفة</h2>
+            <div class="form-group">
+                <label for="jobTitle">عنوان الوظيفة</label>
+                <input type="text" id="jobTitle" name="jobTitle">
+            </div>
+            <div class="form-group">
+                <label for="cityRegion">المدينة / المنطقة</label>
+                <input type="text" id="cityRegion" name="cityRegion">
+            </div>
+            <div class="form-group">
+                <label for="jobType">نوع العمل</label>
+                <input type="text" id="jobType" name="jobType" placeholder="مثال: دوام كامل، دوام جزئي">
+            </div>
+            <div class="form-group">
+                <label for="salary">الراتب</label>
+                <input type="text" id="salary" name="salary">
+            </div>
+            <div class="form-group">
+                <label for="jobAdditional">معلومات إضافية</label>
+                <textarea id="jobAdditional" name="jobAdditional" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn">إرسال إعلان الوظيفة</button>
+        </form>
+
+        <!-- نموذج إعلان سيارة -->
+        <form id="carForm">
+            <h2>إعلان سيارة</h2>
+            <div class="row">
+                <div class="col-33 form-group">
+                    <label for="carMake">الماركة</label>
+                    <input type="text" id="carMake" name="carMake">
+                </div>
+                <div class="col-33 form-group">
+                    <label for="carModel">الموديل</label>
+                    <input type="text" id="carModel" name="carModel">
+                </div>
+                <div class="col-33 form-group">
+                    <label for="carYear">السنة</label>
+                    <input type="number" id="carYear" name="carYear">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-33 form-group">
+                    <label for="mileage">الممشى</label>
+                    <input type="number" id="mileage" name="mileage">
+                </div>
+                <div class="col-33 form-group">
+                    <label for="transmission">ناقل الحركة</label>
+                    <select id="transmission" name="transmission">
+                        <option value="">اختر</option>
+                        <option value="automatic">أوتوماتيك</option>
+                        <option value="manual">يدوي</option>
+                    </select>
+                </div>
+                <div class="col-33 form-group">
+                    <label for="fuelType">نوع الوقود</label>
+                    <select id="fuelType" name="fuelType">
+                        <option value="">اختر</option>
+                        <option value="petrol">بنزين</option>
+                        <option value="diesel">ديزل</option>
+                        <option value="electric">كهربائي</option>
+                        <option value="hybrid">هايبرد</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="carPrice">السعر</label>
+                <input type="number" id="carPrice" name="carPrice">
+            </div>
+            <div class="form-group">
+                <label for="carLocation">الموقع</label>
+                <input type="text" id="carLocation" name="carLocation">
+            </div>
+            <div class="form-group">
+                <label for="carDescription">الوصف</label>
+                <textarea id="carDescription" name="carDescription" rows="3"></textarea>
+            </div>
+            <fieldset>
+                <legend>معلومات الاتصال</legend>
+                <div class="form-group">
+                    <label for="carContactName">الاسم</label>
+                    <input type="text" id="carContactName" name="carContactName">
+                </div>
+                <div class="form-group">
+                    <label for="carPhoneNumber">رقم الهاتف</label>
+                    <input type="tel" id="carPhoneNumber" name="carPhoneNumber">
+                </div>
+            </fieldset>
+            <button type="submit" class="btn">إرسال إعلان السيارة</button>
+        </form>
+    </div>
+    <!-- End create add -->
+
+
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>معلومات عامة</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">من نحن ؟</a></li>
+                    <li><a href="about.html">عن الموقع</a></li>
+                    <li><a href="about.html">كيف يعمل الموقع ؟</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>المساعدة</h3>
+                <ul class="footer-links">
+                    <li><a href="contact-page.html">مركز المساعدة</a></li>
+                    <li><a href="about.html">الأسئلة الشائعة</a></li>
+                    <li><a href="contact-page.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>القانونية</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">شروط الاستخدام</a></li>
+                    <li><a href="about.html">سياسة الخصوصية</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="logos-container">
+            <!-- First Logo Group -->
+            <div class="logo-group">
+                <div class="footer-logo"><img src="images/khidma-logo-footer.png" alt="" width="90px" height="90px">
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- Second Logo Group -->
+            <div class="logo-group">
+                <div class="logo"><img src="images/z-footer.png" alt="" width="90px" height="90px"></div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © 2025 جميع الحقوق محفوظة لشركة زيتونة
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

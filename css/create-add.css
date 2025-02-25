@@ -1,0 +1,133 @@
+.ads-container {
+    max-width: 960px;
+    margin: 50px auto;
+    background: var(--secondary);
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px var(--border-color);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--title-color);
+}
+
+.ad-type-selection {
+    font-family: 'Expo Arabic', sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ad-type-selection label {
+    margin-right: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form {
+    display: none;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    background: var(--background-color);
+}
+
+form.active {
+    display: block;
+}
+
+.form-group {
+    margin: 20px 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--title-color);
+}
+
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.sale,
+.rent {
+    width: 100% important;
+}
+
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.col-33 {
+    flex: 1 1 30%;
+}
+
+.col-50 {
+    flex: 1 1 45%;
+}
+
+fieldset {
+    border: 1px solid var(--border-color);
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+fieldset legend {
+    font-weight: bold;
+    padding: 0 5px;
+    color: var(--title-color);
+}
+
+.btn {
+    background: linear-gradient(-45deg, #2d1a0c 50%, rgba(56, 25, 14, .91) 90%, #2e140a);
+    color: var(--button-text);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--button-hover);
+}
+
+/* تصميم متجاوب */
+@media(max-width: 768px) {
+    .ads-container {
+        width: 90%;
+    }
+
+    .ad-type-selection {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        gap: 20px;
+        text-align: right;
+        margin-top: 30px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col-33,
+    .col-50 {
+        flex: 1 1 100%;
+    }
+}

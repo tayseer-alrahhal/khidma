@@ -103,7 +103,7 @@ function confirmDelete() {
 
 
 
-
+// show terms description 
 function toggleTerm(termElement) {
     let plusIcon = termElement.querySelector(".plus");
     let minusIcon = termElement.querySelector(".minus");
@@ -133,3 +133,31 @@ function toggleTerm(termElement) {
     }
 }
 
+
+
+// إظهار النموذج المناسب بناءً على اختيار نوع الإعلان
+document.addEventListener('DOMContentLoaded', function () {
+    const adTypeRadios = document.querySelectorAll('input[name="adType"]');
+    const realEstateForm = document.getElementById('realEstateForm');
+    const jobForm = document.getElementById('jobForm');
+    const carForm = document.getElementById('carForm');
+
+    function hideAllForms() {
+        realEstateForm.classList.remove('active');
+        jobForm.classList.remove('active');
+        carForm.classList.remove('active');
+    }
+
+    adTypeRadios.forEach(function (radio) {
+        radio.addEventListener('change', function () {
+            hideAllForms();
+            if (this.value === 'realEstate') {
+                realEstateForm.classList.add('active');
+            } else if (this.value === 'job') {
+                jobForm.classList.add('active');
+            } else if (this.value === 'car') {
+                carForm.classList.add('active');
+            }
+        });
+    });
+});
