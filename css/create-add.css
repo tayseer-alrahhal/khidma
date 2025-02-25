@@ -13,16 +13,22 @@ h1 {
     color: var(--title-color);
 }
 
-.ad-type-selection {
-    font-family: 'Expo Arabic', sans-serif;
-    margin-bottom: 20px;
-    text-align: center;
+.ad-type-selection select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+    margin: 20px 0;
 }
 
 .ad-type-selection label {
-    margin-right: 15px;
-    font-weight: bold;
-    cursor: pointer;
+    font-size: 25px;
+}
+
+.ad-type-selection select:focus {
+    border-color: var(--button-hover);
 }
 
 form {
@@ -51,7 +57,13 @@ form.active {
 
 
 
-.form-group input,
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
 .form-group select,
 .form-group textarea {
     width: 100%;

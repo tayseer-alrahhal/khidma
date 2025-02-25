@@ -136,28 +136,27 @@ function toggleTerm(termElement) {
 
 
 // إظهار النموذج المناسب بناءً على اختيار نوع الإعلان
-document.addEventListener('DOMContentLoaded', function () {
-    const adTypeRadios = document.querySelectorAll('input[name="adType"]');
-    const realEstateForm = document.getElementById('realEstateForm');
-    const jobForm = document.getElementById('jobForm');
-    const carForm = document.getElementById('carForm');
+function showFields() {
+    const adType = document.getElementById("adType").value;
+    const forms = document.querySelectorAll('.ad-form');
 
-    function hideAllForms() {
-        realEstateForm.classList.remove('active');
-        jobForm.classList.remove('active');
-        carForm.classList.remove('active');
-    }
-
-    adTypeRadios.forEach(function (radio) {
-        radio.addEventListener('change', function () {
-            hideAllForms();
-            if (this.value === 'realEstate') {
-                realEstateForm.classList.add('active');
-            } else if (this.value === 'job') {
-                jobForm.classList.add('active');
-            } else if (this.value === 'car') {
-                carForm.classList.add('active');
-            }
-        });
+    // إخفاء جميع النماذج أولاً
+    forms.forEach(form => {
+        form.style.display = 'none';
     });
-});
+
+    // إظهار النموذج المناسب بناءً على نوع الإعلان المختار
+    if (adType === 'house') {
+        document.getElementById("realEstateForm").style.display = 'block';
+        document.getElementById("carForm").style.display = 'none';
+        document.getElementById("jobForm").style.display = 'none';
+    } else if (adType === 'job') {
+        document.getElementById("jobForm").style.display = 'block';
+        document.getElementById("realEstateForm").style.display = 'none';
+        document.getElementById("carForm").style.display = 'none';
+    } else if (adType === 'car') {
+        document.getElementById("carForm").style.display = 'block';
+        document.getElementById("jobForm").style.display = 'none';
+        document.getElementById("realEstateForm").style.display = 'none';
+    }
+}

@@ -93,15 +93,13 @@
         <h1>إنشاء إعلان</h1>
         <!-- اختيار نوع الإعلان -->
         <div class="ad-type-selection">
-            <label>
-                <input type="radio" name="adType" value="realEstate"> عقارات للإيجار/للبيع
-            </label>
-            <label>
-                <input type="radio" name="adType" value="job"> إعلان وظيفة
-            </label>
-            <label>
-                <input type="radio" name="adType" value="car"> سيارات للبيع/للإيجار
-            </label>
+            <label for="adType">نوع الإعلان:</label>
+            <select id="adType" onchange="showFields()">
+                <option value="">اختر نوع الإعلان</option>
+                <option value="house">بيع / تأجير منزل</option>
+                <option value="job">إعلان وظيفة</option>
+                <option value="car">بيع / تأجير سيارة</option>
+            </select>
         </div>
 
         <!-- نموذج الإعلان العقاري -->
