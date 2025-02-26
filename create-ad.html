@@ -116,12 +116,21 @@
                 </select>
             </div>
             <div class="form-group">
-                <label>خيار الإعلان</label>
+                <label>خيار الإعلان :</label>
                 <label>
                     <input class="sale" type="radio" name="adOption" value="sale"> بيع
                 </label>
                 <label>
                     <input class="rent" type="radio" name="adOption" value="rent"> إيجار
+                </label>
+            </div>
+            <div class="form-group">
+                <label>الصفة :</label>
+                <label>
+                    <input class="sale" type="radio" name="adOption" value="sale"> مالك
+                </label>
+                <label>
+                    <input class="rent" type="radio" name="adOption" value="rent"> وكيل
                 </label>
             </div>
             <div class="form-group">
@@ -231,6 +240,21 @@
                 <label for="jobAdditional">معلومات إضافية</label>
                 <textarea id="jobAdditional" name="jobAdditional" rows="3"></textarea>
             </div>
+            <fieldset>
+                <legend>معلومات الاتصال</legend>
+                <div class="form-group">
+                    <label for="carContactName">الاسم</label>
+                    <input type="text" id="carContactName" name="carContactName">
+                </div>
+                <div class="form-group">
+                    <label for="carPhoneNumber">رقم الهاتف</label>
+                    <input type="tel" id="carPhoneNumber" name="carPhoneNumber">
+                </div>
+                <div class="form-group">
+                    <label for="carPhoneNumber">البريد الاللكتروني</label>
+                    <input type="email" id="carPhoneNumber" name="carPhoneNumber">
+                </div>
+            </fieldset>
             <button type="submit" class="btn">إرسال إعلان الوظيفة</button>
         </form>
 
@@ -296,6 +320,10 @@
                 <div class="form-group">
                     <label for="carPhoneNumber">رقم الهاتف</label>
                     <input type="tel" id="carPhoneNumber" name="carPhoneNumber">
+                </div>
+                <div class="form-group">
+                    <label for="carPhoneNumber">البريد الاللكتروني</label>
+                    <input type="email" id="carPhoneNumber" name="carPhoneNumber">
                 </div>
             </fieldset>
             <button type="submit" class="btn">إرسال إعلان السيارة</button>
