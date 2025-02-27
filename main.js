@@ -55,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Show password logic
-
 document.querySelectorAll(".toggle-password").forEach(button => {
     button.addEventListener("click", function () {
         const passwordInput = this.previousElementSibling;
@@ -90,13 +89,11 @@ function toggleEdit() {
 function saveChanges() {
     // Here you would typically send the updated data to a server
     toggleEdit();
-    alert('تم حفظ التغييرات بنجاح!');
 }
 
 function confirmDelete() {
     if (confirm('هل أنت متأكد من أنك تريد حذف حسابك؟ هذا الإجراء لا يمكن التراجع عنه.')) {
         // Here you would typically send a delete request to the server
-        alert('تم حذف الحساب بنجاح');
         // Redirect to login page or home page
     }
 }
@@ -160,3 +157,5 @@ function showFields() {
         document.getElementById("realEstateForm").style.display = 'none';
     }
 }
+
+
