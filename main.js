@@ -157,5 +157,3 @@ function showFields() {
         document.getElementById("realEstateForm").style.display = 'none';
     }
 }
-
-
