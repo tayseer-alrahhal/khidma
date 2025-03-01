@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Render All Elements Normaly -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- main Template Css File -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/my-ads.css">
+    <link rel="icon" href="images/logo-v2.png" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <title>إعلاناتي</title>
+</head>
+
+<body>
+    <!-- Start Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Logo.png" alt="Logo" width="60px" height="60px">
+                </a>
+                <img src="images/flag.png" alt="Flag" width="60px" height="60px">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="create-ad.html">اضافة اعلان</a></li>
+                    <li><a href="contact-page.html">تواصل معنا</a></li>
+                    <button class="user-btn">
+                        <img src="images/user.png" alt="" onclick="openUserOptions()">
+                    </button>
+                </ul>
+            </nav>
+
+            <div class="user-options">
+                <ul>
+                    <li><a href="#">اعلاناتي</a></li>
+                    <li><a href="about.html">عن خدمة</a></li>
+                    <li><a href="account-details.html">معلومات الحساب</a></li>
+                    <li><a href="register.html">انشاء حساب</a></li>
+                    <li><a href="login.html">تسجيل الدخول</a></li>
+                </ul>
+            </div>
+
+            <svg class="menu-btn" onclick="openMenu()" stroke="currentColor" fill="currentColor" stroke-width="0"
+                viewBox="0 0 20 20" aria-hidden="true" height="35" width="35" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"></path>
+            </svg>
+
+            <div class="overlay" onclick="closeMenu()"></div>
+            <div class="model">
+                <svg class="close-menu" onclick="closeMenu()" stroke="currentColor" fill="currentColor" stroke-width="0"
+                    viewBox="0 0 24 24" height="35" width="35" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="none" stroke-width="2" d="M7,7 L17,17 M7,17 L17,7"></path>
+                </svg>
+                <ul>
+                    <li><a href="index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="#">اعلانات عاجلة</a></li>
+                    <li><a href="contact-page.html">تواصل معنا</a></li>
+                    <li><a href="#">اعلاناتي</a></li>
+                    <li><a href="about.html">عن خدمة</a></li>
+                    <li><a href="account-details.html">معلومات الحساب</a></li>
+                    <li><a href="register.html">انشاء حساب</a></li>
+                    <li><a href="login.html">تسجيل الدخول</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+
+        </div>
+    </header>
+    <!-- End Header  -->
+
+    <!-- Start my ads page  -->
+    <div class="my-ad-container">
+        <div class="head">
+            <h1>إعلاناتي المنشورة</h1>
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">إجمالي الإعلانات</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">إعلانات نشطة</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">إعلانات معلقة</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">إعلانات منتهية</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-bar">
+            <div class="filter-group">
+                <span class="filter-label">نوع الإعلان:</span>
+                <select class="filter-select">
+                    <option value="all">الكل</option>
+                    <option value="real-estate">عقارات</option>
+                    <option value="job">وظائف</option>
+                    <option value="car">سيارات</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <span class="filter-label">الحالة:</span>
+                <select class="filter-select">
+                    <option value="all">الكل</option>
+                    <option value="active">نشط</option>
+                    <option value="pending">معلق</option>
+                    <option value="expired">منتهي</option>
+                </select>
+            </div>
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="بحث في إعلاناتي...">
+            </div>
+        </div>
+
+        <div class="ads-grid">
+            <!-- Real Estate Ad -->
+            <div class="ad-card">
+                <div class="ad-image-container">
+                    <img src="images/flag.png" alt="صورة العقار" class="ad-image">
+                    <div class="ad-badges">
+                        <span class="ad-badge badge-real-estate">عقار</span>
+                    </div>
+                </div>
+                <div class="ad-content">
+                    <h3 class="ad-title">شقة فاخرة للبيع في حي الروضة</h3>
+                    <div class="ad-price">450,000 ريال</div>
+                    <div class="ad-details">
+                        <div class="ad-detail">الغرف: 3</div>
+                        <div class="ad-detail">المساحة: 150 م²</div>
+                        <div class="ad-detail">نوع العقار: شقة</div>
+                        <div class="ad-detail">الإيجار/البيع: بيع</div>
+                    </div>
+                    <div class="ad-status">
+                        <div class="status-indicator">
+                            <div class="status-dot status-active"></div>
+                            <span class="status-text">نشط</span>
+                        </div>
+                        <div class="ad-date">نُشر منذ 3 أيام</div>
+                    </div>
+                    <div class="ad-actions">
+                        <button class="ad-btn btn-edit">تعديل</button>
+                        <button class="ad-btn btn-delete">حذف</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car Ad -->
+            <div class="ad-card">
+                <div class="ad-image-container">
+                    <img src="images/flag.png" alt="صورة السيارة" class="ad-image">
+                    <div class="ad-badges">
+                        <span class="ad-badge badge-car">سيارة</span>
+                    </div>
+                </div>
+                <div class="ad-content">
+                    <h3 class="ad-title">تويوتا كامري 2023 للبيع</h3>
+                    <div class="ad-price">125,000 ريال</div>
+                    <div class="ad-details">
+                        <div class="ad-detail">الموديل: 2023</div>
+                        <div class="ad-detail">الممشى: 15,000 كم</div>
+                        <div class="ad-detail">ناقل الحركة: أوتوماتيك</div>
+                        <div class="ad-detail">نوع الوقود: بنزين</div>
+                    </div>
+                    <div class="ad-status">
+                        <div class="status-indicator">
+                            <div class="status-dot status-active"></div>
+                            <span class="status-text">نشط</span>
+                        </div>
+                        <div class="ad-date">نُشر منذ 1 يوم</div>
+                    </div>
+                    <div class="ad-actions">
+                        <button class="ad-btn btn-edit">تعديل</button>
+                        <button class="ad-btn btn-delete">حذف</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Job Ad -->
+            <div class="ad-card">
+                <div class="ad-image-container">
+                    <img src="images/flag.png" alt="صورة الوظيفة" class="ad-image">
+                    <div class="ad-badges">
+                        <span class="ad-badge badge-job">وظيفة</span>
+                    </div>
+                </div>
+                <div class="ad-content">
+                    <h3 class="ad-title">مطلوب مهندس برمجيات</h3>
+                    <div class="ad-price">15,000 - 20,000 ريال</div>
+                    <div class="ad-details">
+                        <div class="ad-detail">المدينة: الرياض</div>
+                        <div class="ad-detail">نوع العمل: دوام كامل</div>
+                        <div class="ad-detail">الخبرة: 3 سنوات</div>
+                        <div class="ad-detail">المؤهل: بكالوريوس</div>
+                    </div>
+                    <div class="ad-status">
+                        <div class="status-indicator">
+                            <div class="status-dot status-pending"></div>
+                            <span class="status-text">معلق</span>
+                        </div>
+                        <div class="ad-date">نُشر منذ 5 أيام</div>
+                    </div>
+                    <div class="ad-actions">
+                        <button class="ad-btn btn-edit">تعديل</button>
+                        <button class="ad-btn btn-delete">حذف</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <div class="page-item active">
+                <a href="#" class="page-link">1</a>
+            </div>
+            <div class="page-item">
+                <a href="#" class="page-link">2</a>
+            </div>
+            <div class="page-item">
+                <a href="#" class="page-link">3</a>
+            </div>
+            <div class="page-item">
+                <a href="#" class="page-link">التالي »</a>
+            </div>
+        </div>
+
+        <!-- Empty state (hidden by default) -->
+        <div class="empty-state" style="display: none;">
+            <div class="empty-state-icon">📦</div>
+            <div class="empty-state-text">لا توجد إعلانات منشورة حتى الآن</div>
+            <a href="#" class="btn-primary">إنشاء إعلان جديد</a>
+        </div>
+    </div>
+    <!-- End my ads page  -->
+
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>معلومات عامة</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">من نحن ؟</a></li>
+                    <li><a href="about.html">عن الموقع</a></li>
+                    <li><a href="about.html">كيف يعمل الموقع ؟</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>المساعدة</h3>
+                <ul class="footer-links">
+                    <li><a href="contact-page.html">مركز المساعدة</a></li>
+                    <li><a href="about.html">الأسئلة الشائعة</a></li>
+                    <li><a href="contact-page.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>القانونية</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">شروط الاستخدام</a></li>
+                    <li><a href="about.html">سياسة الخصوصية</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="logos-container">
+            <!-- First Logo Group -->
+            <div class="logo-group">
+                <div class="footer-logo"><img src="images/khidma-logo-footer.png" alt="" width="90px" height="90px">
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- Second Logo Group -->
+            <div class="logo-group">
+                <div class="logo"><img src="images/z-footer.png" alt="" width="90px" height="90px"></div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © 2025 جميع الحقوق محفوظة لشركة زيتونة
+        </div>
+    </footer>
+    <!-- End Footer -->
+</body>
+
+</html>
