@@ -1,0 +1,245 @@
+.hospitals-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Search Section */
+.search-section {
+    padding: 3rem 0;
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+.search-title {
+    color: var(--title-color);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.search-description {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: var(--paragraph-color);
+}
+
+.search-box {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--secondary);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    text-align: right;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--title-color);
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--button-bg);
+}
+
+.search-btn {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 93.5%;
+    margin-top: 1rem;
+}
+
+.search-btn:hover {
+    background-color: var(--button-hover);
+}
+
+/* Results Section */
+.results-section {
+    padding: 2rem 0 4rem;
+}
+
+.results-title {
+    color: var(--title-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.no-results {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    color: var(--title-color);
+    display: none;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.hospital-card {
+    background-color: var(--secondary);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    border: 1px solid var(--border-color);
+}
+
+.hospital-card:hover {
+    transform: translateY(-5px);
+}
+
+.hospital-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.hospital-content {
+    padding: 1.5rem;
+}
+
+.hospital-name {
+    color: var(--title-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hospital-address {
+    color: var(--paragraph-color);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.hospital-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: var(--paragraph-color);
+    font-size: 0.9rem;
+}
+
+.info-icon {
+    margin-left: 0.5rem;
+    color: var(--button-bg);
+}
+
+
+.hospital-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.action-btn {
+    flex: 1;
+    padding: 0.5rem 0;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+
+.btn-secondary {
+    background: linear-gradient(-45deg, #2d1a0c 50%, rgba(56, 25, 14, .91) 90%, #2e140a);
+    border: 1px solid var(--button-bg);
+    color: var(--button-text);
+}
+
+.btn-secondary:hover {
+    background-color: var(--button-hover);
+}
+
+/* Filter Section */
+.filter-section {
+    margin-bottom: 2rem;
+    background-color: var(--secondary);
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+.filter-title {
+    margin-bottom: 1rem;
+    color: var(--title-color);
+    font-size: 1.2rem;
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-label {
+    margin-left: 0.5rem;
+    color: var(--title-color);
+}
+
+
+
+@media (max-width: 768px) {
+    .search-btn {
+        width: 84%;
+    }
+}
+
+@media (max-width: 576px) {
+    .search-title {
+        font-size: 1.8rem;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+}

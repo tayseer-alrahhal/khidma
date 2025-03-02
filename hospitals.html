@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Render All Elements Normaly -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- main Template Css File -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/hospitals.css" />
+    <link rel="icon" href="images/logo-v2.png" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <title>ابحث عن أقرب مستشفى</title>
+
+
+</head>
+
+<body>
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="hospitals-container">
+            <h1 class="search-title">ابحث عن أقرب مستشفى</h1>
+            <p class="search-description">يمكنك البحث عن أقرب المستشفيات والمراكز الصحية في منطقتك بسهولة. حدد المحافظة
+                أو المنطقة أو القرية التي تتواجد فيها للعثور على الخدمات الصحية القريبة منك.</p>
+
+            <div class="search-box">
+                <form class="search-form">
+                    <div class="form-group">
+                        <label class="form-label">المحافظة</label>
+                        <select class="form-control" id="governorate">
+                            <option selected disabled>اختر المحافظة</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">المنطقة/المركز</label>
+                        <select class="form-control" id="region" disabled>
+                            <option selected disabled>اختر المنطقة أو المركز</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">الحي/القرية</label>
+                        <select class="form-control" id="district" disabled>
+                            <option selected disabled>اختر الحي أو القرية</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">نوع المنشأة</label>
+                        <select class="form-control" id="facility-type">
+                            <option selected value="all">جميع المنشآت الصحية</option>
+                            <option value="hospital">مستشفيات</option>
+                            <option value="clinic">عيادات</option>
+                            <option value="center">مراكز صحية</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="search-btn" id="search-button">بحث</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="hospitals-container">
+            <h2 class="results-title">نتائج البحث</h2>
+
+            <div class="filter-section">
+                <h3 class="filter-title">تصفية النتائج</h3>
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <input type="checkbox" id="open-24h">
+                        <label class="filter-label" for="open-24h">مفتوح 24 ساعة</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <input type="checkbox" id="has-emergency">
+                        <label class="filter-label" for="has-emergency">خدمة طوارئ</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <input type="checkbox" id="govt-hospital">
+                        <label class="filter-label" for="govt-hospital">مستشفيات حكومية</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <input type="checkbox" id="private-hospital">
+                        <label class="filter-label" for="private-hospital">مستشفيات خاصة</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="no-results" id="no-results">
+                <h3>لا توجد نتائج</h3>
+                <p>لم يتم العثور على منشآت صحية في المنطقة المحددة. يرجى تعديل معايير البحث.</p>
+            </div>
+
+            <div class="results-grid" id="results-container">
+                <!-- Hospital Card 1 -->
+                <div class="hospital-card">
+                    <img src="images/services/service-1.jpg" alt="مستشفى القاهرة التخصصي" class="hospital-image">
+                    <div class="hospital-content">
+                        <h3 class="hospital-name">مستشفى ادلب</h3>
+                        <p class="hospital-address">ادلب المدينة</p>
+                        <div class="hospital-info">
+                            <div class="info-item">
+                                <span class="info-icon">🏥</span>
+                                <span>مستشفى خاص</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">🕒</span>
+                                <span>24 ساعة</span>
+                            </div>
+                        </div>
+                        <div class="hospital-actions">
+                            <a href="#" class="action-btn btn-secondary">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
