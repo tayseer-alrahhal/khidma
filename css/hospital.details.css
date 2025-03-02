@@ -41,6 +41,14 @@
     .info-grid {
         grid-template-columns: 1fr;
     }
+
+    .hospital-card {
+        margin: 10px;
+    }
+
+    .back-button {
+        margin-left: 20px;
+    }
 }
 
 .info-item {
@@ -107,12 +115,25 @@
     background-color: var(--button-hover);
 }
 
+
+@media (max-width: 768px) {
+    .back-button {
+        margin-right: 13px;
+    }
+}
+
 .map-container {
     margin-top: 30px;
     height: 300px;
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+    .map-container {
+        margin: 10px;
+    }
 }
 
 .map-placeholder {
