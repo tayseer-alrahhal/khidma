@@ -52,6 +52,7 @@ body {
   z-index: -1;
 }
 
+
 ul {
   list-style: none;
 }
@@ -548,6 +549,30 @@ section.services .service-content .more-btn {
   background: linear-gradient(-45deg, #2d1a0c 50%, rgba(56, 25, 14, .91) 90%, #2e140a);
   border-radius: .3rem;
   color: var(--secondary);
+}
+
+.hidden-btn1 {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  position: absolute;
+  left: 61%;
+  bottom: 40px;
+  transform: translateX(-50%);
+}
+.hidden-btn2 {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  position: absolute;
+  left: 25%;
+  bottom: 40px;
+  transform: translateX(-50%);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 

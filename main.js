@@ -100,7 +100,7 @@ function confirmDelete() {
 
 
 
-// show terms description 
+// اظهار شرح الشروح
 function toggleTerm(termElement) {
     let plusIcon = termElement.querySelector(".plus");
     let minusIcon = termElement.querySelector(".minus");
@@ -156,4 +156,16 @@ function showFields() {
         document.getElementById("jobForm").style.display = 'none';
         document.getElementById("realEstateForm").style.display = 'none';
     }
+}
+
+
+
+// اظهار الزرين الخاص في الخدمات الصحية
+function showButton() {
+    const secondButton1 = document.getElementById("secondButton1");
+    const secondButton2 = document.getElementById("secondButton2");
+    const moreBtn = document.getElementById("more-btn");
+    secondButton1.classList.add("visible");
+    secondButton2.classList.add("visible");
+    moreBtn.style.opacity = 0
 }
