@@ -169,3 +169,32 @@ function showButton() {
     secondButton2.classList.add("visible");
     moreBtn.style.opacity = 0
 }
+
+
+
+// صور قسم تفاصيل الاعلان
+function changeMainImage(thumbnail) {
+    // Remove active class from all thumbnails
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    thumbnails.forEach(t => t.classList.remove('active'));
+
+    // Add active class to clicked thumbnail
+    thumbnail.classList.add('active');
+
+    // Change main image source
+    const mainImage = document.getElementById('mainImage');
+    mainImage.src = thumbnail.src;
+}
+
+
+
+
+window.onload = function () {
+    // احصل على جميع العناصر التي تحتوي على الصف "info-value"
+    let values = document.querySelectorAll('.info-value');
+
+    // اجعل كل عنصر منها قابلاً للتعديل
+    values.forEach(function (value) {
+        value.setAttribute('contenteditable', 'true');
+    });
+}

@@ -301,7 +301,10 @@ h1 {
 
 .page-link:hover {
     background-color: var(--button-hover);
+    color: var(--button-text);
 }
+
+
 
 .page-item.active .page-link {
     background: linear-gradient(-45deg, #2d1a0c 50%, rgba(56, 25, 14, .91) 90%, #2e140a);
@@ -328,22 +331,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-.btn-primary {
-    padding: 10px 20px;
-    background: linear-gradient(-45deg, #2d1a0c 50%, rgba(56, 25, 14, .91) 90%, #2e140a);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.btn-primary:hover {
-    background-color: var(--button-hover);
-}
 
 @media screen and (max-width: 768px) {
     .dashboard-stats {

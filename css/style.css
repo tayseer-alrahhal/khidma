@@ -2,7 +2,7 @@
 
 :root {
   --background-color: #fdfdfdf;
-  --secondary: #fdfdfdcd;
+  --secondary: #fdfdfde6;
   --title-color: #26261E;
   --paragraph-color: #26261eb5;
   --button-bg: #40271C;
@@ -560,6 +560,7 @@ section.services .service-content .more-btn {
   bottom: 40px;
   transform: translateX(-50%);
 }
+
 .hidden-btn2 {
   opacity: 0;
   transform: translateY(-20px);
