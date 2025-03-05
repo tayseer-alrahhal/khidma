@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <!-- main Template Css File -->
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/homesAd-edit.css" />
+    <link rel="stylesheet" href="../css/jopAd-edit.css" />
     <link rel="icon" href="images/logo-v2.png" />
     <link rel="icon" href="../images/logo-v2.png">
     <!-- google fonts -->
@@ -90,133 +90,48 @@
     <!-- Start ad details -->
     <div class="ads-container">
 
-        <!-- نموذج الإعلان العقاري -->
-        <form id="realEstateForm">
-            <h2>تعديل الاعلان العقاري</h2>
+        <!-- نموذج إعلان وظيفة -->
+        <form id="jobForm">
+            <h2>تعديل علان الوظيفة</h2>
             <div class="form-group">
-                <label for="propertyType">نوع العقار</label>
-                <select id="propertyType" name="propertyType">
-                    <option value="">اختر</option>
-                    <option value="apartment">شقة</option>
-                    <option value="house">منزل</option>
-                    <option value="villa">فيلا</option>
-                    <option value="studio">ستوديو</option>
-                </select>
+                <label for="jobTitle">عنوان الوظيفة</label>
+                <input type="text" id="jobTitle" name="jobTitle">
             </div>
             <div class="form-group">
-                <label>خيار الإعلان :</label>
-                <label>
-                    <input class="sale" type="radio" name="adOption" value="sale"> بيع
-                </label>
-                <label>
-                    <input class="rent" type="radio" name="adOption" value="rent"> إيجار
-                </label>
+                <label for="cityRegion">المدينة / المنطقة</label>
+                <input type="text" id="cityRegion" name="cityRegion">
             </div>
             <div class="form-group">
-                <label>الصفة :</label>
-                <label>
-                    <input class="sale" type="radio" name="adOption" value="sale"> مالك
-                </label>
-                <label>
-                    <input class="rent" type="radio" name="adOption" value="rent"> وكيل
-                </label>
+                <label for="jobType">نوع العمل</label>
+                <input type="text" id="jobType" name="jobType" placeholder="مثال: دوام كامل، دوام جزئي">
             </div>
             <div class="form-group">
-                <label for="purpose">الغرض</label>
-                <input type="text" id="purpose" name="purpose" placeholder="مثال: سكني، تجاري">
-            </div>
-            <div class="row">
-                <div class="col-33 form-group">
-                    <label for="area">المساحة</label>
-                    <input type="number" id="area" name="area">
-                </div>
-                <div class="col-33 form-group">
-                    <label for="rooms">عدد الغرف</label>
-                    <input type="number" id="rooms" name="rooms">
-                </div>
-                <div class="col-33 form-group">
-                    <label for="price">السعر</label>
-                    <input type="number" id="price" name="price">
-                </div>
+                <label for="salary">الراتب</label>
+                <input type="text" id="salary" name="salary">
             </div>
             <div class="form-group">
-                <label for="rentDuration">مدة الإيجار</label>
-                <input type="text" id="rentDuration" name="rentDuration" placeholder="مثال: شهري، سنوي">
+                <label for="jobAdditional">معلومات إضافية</label>
+                <textarea id="jobAdditional" name="jobAdditional" rows="3"></textarea>
             </div>
-
-            <!-- إضافة قسم تحميل الصور للعقار -->
-            <fieldset>
-                <legend>صور العقار</legend>
-                <div class="form-group">
-                    <label for="propertyImages">تحميل صور للعقار (يمكن اختيار عدة صور)</label>
-                    <input type="file" id="propertyImages" name="propertyImages" multiple accept="image/*">
-                </div>
-                <div class="image-preview" id="propertyImagePreview">
-                    <!-- ستظهر هنا معاينة الصور المحملة -->
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>الموقع</legend>
-                <div class="form-group">
-                    <label for="governorate">المحافظة</label>
-                    <input type="text" id="governorate" name="governorate">
-                </div>
-                <div class="form-group">
-                    <label for="city">المدينة</label>
-                    <input type="text" id="city" name="city">
-                </div>
-                <div class="form-group">
-                    <label for="neighborhood">القرية / الحي</label>
-                    <input type="text" id="neighborhood" name="neighborhood">
-                </div>
-                <div class="form-group">
-                    <label for="nameNumber">الاسم / الرقم</label>
-                    <input type="text" id="nameNumber" name="nameNumber">
-                </div>
-                <div class="form-group">
-                    <label for="street">الشارع</label>
-                    <input type="text" id="street" name="street">
-                </div>
-                <div class="form-group">
-                    <label for="detailedAddress">العنوان بالتفصيل</label>
-                    <input type="text" id="detailedAddress" name="detailedAddress">
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>الميزات الداخلية</legend>
-                <div class="form-group">
-                    <label for="view">الإطلالة</label>
-                    <select id="view" name="view">
-                        <option value="">اختر</option>
-                        <option value="none">لا شيء</option>
-                        <option value="yes">نعم</option>
-                        <option value="furnished">أثاث المنزل</option>
-                        <option value="additional">مرافق إضافية</option>
-                    </select>
-                </div>
-            </fieldset>
-
             <fieldset>
                 <legend>معلومات الاتصال</legend>
                 <div class="form-group">
-                    <label for="contactName">اسم الشخص</label>
-                    <input type="text" id="contactName" name="contactName">
+                    <label for="carContactName">الاسم</label>
+                    <input type="text" id="carContactName" name="carContactName">
                 </div>
                 <div class="form-group">
-                    <label for="phoneNumber">رقم الهاتف</label>
-                    <input type="tel" id="phoneNumber" name="phoneNumber">
+                    <label for="carPhoneNumber">رقم الهاتف</label>
+                    <input type="tel" id="carPhoneNumber" name="carPhoneNumber">
                 </div>
                 <div class="form-group">
-                    <label for="additionalDetails">تفاصيل إضافية</label>
-                    <textarea id="additionalDetails" name="additionalDetails" rows="3"></textarea>
+                    <label for="carPhoneNumber">البريد الاللكتروني</label>
+                    <input type="email" id="carPhoneNumber" name="carPhoneNumber">
                 </div>
             </fieldset>
-
-            <button type="submit" class="btn">تعديل الاعلان العقاري</button>
+            <button type="submit" class="btn">تعديل اعلان التوظيف</button>
         </form>
     </div>
+
     <!-- End ad details -->
 
     <!-- Start Footer -->

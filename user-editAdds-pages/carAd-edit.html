@@ -90,131 +90,152 @@
     <!-- Start ad details -->
     <div class="ads-container">
 
-        <!-- نموذج الإعلان العقاري -->
-        <form id="realEstateForm">
-            <h2>تعديل الاعلان العقاري</h2>
-            <div class="form-group">
-                <label for="propertyType">نوع العقار</label>
-                <select id="propertyType" name="propertyType">
-                    <option value="">اختر</option>
-                    <option value="apartment">شقة</option>
-                    <option value="house">منزل</option>
-                    <option value="villa">فيلا</option>
-                    <option value="studio">ستوديو</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>خيار الإعلان :</label>
-                <label>
-                    <input class="sale" type="radio" name="adOption" value="sale"> بيع
-                </label>
-                <label>
-                    <input class="rent" type="radio" name="adOption" value="rent"> إيجار
-                </label>
-            </div>
-            <div class="form-group">
-                <label>الصفة :</label>
-                <label>
-                    <input class="sale" type="radio" name="adOption" value="sale"> مالك
-                </label>
-                <label>
-                    <input class="rent" type="radio" name="adOption" value="rent"> وكيل
-                </label>
-            </div>
-            <div class="form-group">
-                <label for="purpose">الغرض</label>
-                <input type="text" id="purpose" name="purpose" placeholder="مثال: سكني، تجاري">
+        <!-- نموذج إعلان سيارة -->
+        <form id="carForm" action="insert_car.php" method="POST" enctype="multipart/form-data">
+            <h2>تعديل اعلان السيارة</h2>
+            <div class="row">
+                <div class="col-33 form-group">
+                    <label for="carMake">الماركة</label>
+                    <input type="text" id="carMake" name="carMake">
+                </div>
+                <div class="col-33 form-group">
+                    <label for="carModel">الموديل</label>
+                    <input type="text" id="carModel" name="carModel">
+                </div>
+                <div class="col-33 form-group">
+                    <label for="carYear">السنة</label>
+                    <input type="number" id="carYear" name="carYear">
+                </div>
             </div>
             <div class="row">
                 <div class="col-33 form-group">
-                    <label for="area">المساحة</label>
-                    <input type="number" id="area" name="area">
+                    <label for="mileage">الممشى</label>
+                    <input type="number" id="mileage" name="mileage">
                 </div>
                 <div class="col-33 form-group">
-                    <label for="rooms">عدد الغرف</label>
-                    <input type="number" id="rooms" name="rooms">
+                    <label for="transmission">ناقل الحركة</label>
+                    <select id="transmission" name="transmission">
+                        <option value="">اختر</option>
+                        <option value="automatic">أوتوماتيك</option>
+                        <option value="manual">يدوي</option>
+                    </select>
                 </div>
                 <div class="col-33 form-group">
-                    <label for="price">السعر</label>
-                    <input type="number" id="price" name="price">
+                    <label for="fuelType">نوع الوقود</label>
+                    <select id="fuelType" name="fuelType">
+                        <option value="">اختر</option>
+                        <option value="petrol">بنزين</option>
+                        <option value="diesel">ديزل</option>
+                        <option value="electric">كهربائي</option>
+                        <option value="hybrid">هايبرد</option>
+                    </select>
                 </div>
             </div>
             <div class="form-group">
-                <label for="rentDuration">مدة الإيجار</label>
-                <input type="text" id="rentDuration" name="rentDuration" placeholder="مثال: شهري، سنوي">
+                <label for="carPrice">السعر</label>
+                <input type="number" id="carPrice" name="carPrice">
             </div>
-
-            <!-- إضافة قسم تحميل الصور للعقار -->
-            <fieldset>
-                <legend>صور العقار</legend>
-                <div class="form-group">
-                    <label for="propertyImages">تحميل صور للعقار (يمكن اختيار عدة صور)</label>
-                    <input type="file" id="propertyImages" name="propertyImages" multiple accept="image/*">
-                </div>
-                <div class="image-preview" id="propertyImagePreview">
-                    <!-- ستظهر هنا معاينة الصور المحملة -->
-                </div>
-            </fieldset>
+            <div class="form-group">
+                <label for="carDescription">الوصف</label>
+                <textarea id="carDescription" name="carDescription" rows="3"></textarea>
+            </div>
 
             <fieldset>
                 <legend>الموقع</legend>
+                <!-- المحافظة -->
                 <div class="form-group">
-                    <label for="governorate">المحافظة</label>
-                    <input type="text" id="governorate" name="governorate">
+                    <label>
+                        <span>المحافظة</span>
+                        <select id="car_province" name="province" onchange="updateAreas('car_province','car_district')"
+                            required>
+                            <option value="" disabled selected>اختر المحافظة</option>
+                            <option value="دمشق">دمشق</option>
+                            <option value="ريف دمشق">ريف دمشق</option>
+                            <option value="حلب">حلب</option>
+                            <option value="حمص">حمص</option>
+                            <option value="حماة">حماة</option>
+                            <option value="اللاذقية">اللاذقية</option>
+                            <option value="طرطوس">طرطوس</option>
+                            <option value="دير الزور">دير الزور</option>
+                            <option value="الرقة">الرقة</option>
+                            <option value="الحسكة">الحسكة</option>
+                            <option value="إدلب">إدلب</option>
+                            <option value="درعا">درعا</option>
+                            <option value="القنيطرة">القنيطرة</option>
+                            <option value="السويداء">السويداء</option>
+                        </select>
+                    </label>
                 </div>
-                <div class="form-group">
-                    <label for="city">المدينة</label>
-                    <input type="text" id="city" name="city">
-                </div>
-                <div class="form-group">
-                    <label for="neighborhood">القرية / الحي</label>
-                    <input type="text" id="neighborhood" name="neighborhood">
-                </div>
-                <div class="form-group">
-                    <label for="nameNumber">الاسم / الرقم</label>
-                    <input type="text" id="nameNumber" name="nameNumber">
-                </div>
-                <div class="form-group">
-                    <label for="street">الشارع</label>
-                    <input type="text" id="street" name="street">
-                </div>
-                <div class="form-group">
-                    <label for="detailedAddress">العنوان بالتفصيل</label>
-                    <input type="text" id="detailedAddress" name="detailedAddress">
-                </div>
-            </fieldset>
 
-            <fieldset>
-                <legend>الميزات الداخلية</legend>
+                <!-- المنطقة (فارغة) -->
                 <div class="form-group">
-                    <label for="view">الإطلالة</label>
-                    <select id="view" name="view">
-                        <option value="">اختر</option>
-                        <option value="none">لا شيء</option>
-                        <option value="yes">نعم</option>
-                        <option value="furnished">أثاث المنزل</option>
-                        <option value="additional">مرافق إضافية</option>
-                    </select>
+                    <label>
+                        <span>المنطقة</span>
+                        <select id="car_district"
+                            onchange="updateSubAreas('car_province','car_district','car_subdistrict')" name="district">
+                            <option value="" disabled selected>اختر المنطقة</option>
+                        </select>
+                    </label>
+                </div>
+
+                <!-- الناحية (فارغة) -->
+                <div class="form-group">
+                    <label>
+                        <span>الناحية</span>
+                        <select id="car_subdistrict" name="subdistrict">
+                            <option value="" disabled selected>اختر الناحية</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="additionalDetails">العنوان بالتفصيل</label>
+                    <textarea id="additionalDetails" name="address" rows="3"></textarea>
                 </div>
             </fieldset>
 
             <fieldset>
                 <legend>معلومات الاتصال</legend>
                 <div class="form-group">
-                    <label for="contactName">اسم الشخص</label>
-                    <input type="text" id="contactName" name="contactName">
+                    <label for="carContactName">الاسم</label>
+                    <input type="text" id="carContactName" name="carContactName">
                 </div>
                 <div class="form-group">
-                    <label for="phoneNumber">رقم الهاتف</label>
-                    <input type="tel" id="phoneNumber" name="phoneNumber">
-                </div>
-                <div class="form-group">
-                    <label for="additionalDetails">تفاصيل إضافية</label>
-                    <textarea id="additionalDetails" name="additionalDetails" rows="3"></textarea>
+                    <label for="carPhoneNumber">رقم الهاتف</label>
+                    <input type="tel" id="carPhoneNumber" name="carPhoneNumber">
                 </div>
             </fieldset>
 
-            <button type="submit" class="btn">تعديل الاعلان العقاري</button>
+            <!-- إضافة قسم تحميل الصور للسيارة -->
+            <fieldset style="border: 1px solid #ccc; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+
+                <legend style="font-weight: bold; padding: 0 10px;">صور السيارة</legend>
+
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="carImages" style="display: block; font-weight: bold; margin-bottom: 8px;">تحميل صور
+                        للسيارة (يمكن اختيار عدة صور)</label>
+                    <input type="file" id="carImages" value="تحميل" name="file[]" multiple accept="image/*,video/*"
+                        style="padding: 5px; border: 1px solid #ccc; border-radius: 3px;">
+                </div>
+
+                <div class="image-preview" id="carImagePreview"
+                    style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+                    <!-- ستظهر هنا معاينة الصور المحملة -->
+                </div>
+            </fieldset>
+            <script src="adds_images_preview.js"></script>
+            <fieldset>
+                <div class="form-group">
+                    <label>نوع الاعلان:</label>
+                    <label>
+                        <input class="normal" type="radio" name="ad_type" value="normal"> عادي
+                    </label>
+                    <label>
+                        <input class="urgent" type="radio" name="ad_type" value="urgent"> مستعجل
+                    </label>
+                </div>
+            </fieldset>
+            <button type="submit" class="btn">تعديل اعلان السيارة</button>
         </form>
     </div>
     <!-- End ad details -->
