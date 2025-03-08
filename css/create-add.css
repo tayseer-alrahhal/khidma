@@ -142,15 +142,6 @@ input[type="file"] {
     direction: rtl;
 }
 
-#realEstateForm  {
-    display: none;
-}
-#jobForm  {
-    display: none;
-}
-#carForm  {
-    display: none;
-}
 
 /* تصميم متجاوب */
 @media(max-width: 768px) {
